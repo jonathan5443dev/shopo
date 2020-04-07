@@ -29,7 +29,7 @@ export default class NavigationLoader {
     const action = StackActions.reset({
       index: 0,
       key: undefined,
-      actions: [NavigationActions.navigate({routeName})]
+      actions: [NavigationActions.navigate({routeName})],
     });
     this.stack.dispatch(action);
   }

@@ -12,6 +12,10 @@ import Home from '../../screens/home/home';
 import TabIcon from '../../components/tab-icon/tab-icon';
 
 const AppNavigator = createStackNavigator({
+  Login: {
+    screen: Login,
+    navigationOptions: () => emptyHeader(),
+  },
   Home: createBottomTabNavigator(
     {
       Home: {
@@ -23,7 +27,7 @@ const AppNavigator = createStackNavigator({
       Help: {
         screen: Home,
       },
-      Profile: {
+      Account: {
         screen: Home,
       },
     },
