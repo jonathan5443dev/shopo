@@ -11,9 +11,8 @@ import {
 
 /*
  * Available colors
- * -- aquamarine(default)
- * -- navyBlue
- * -- white
+ * -- primary
+ * -- red
  */
 const CustomButton = ({value, onPress, color, disabled, outlined, icon}) => {
   if (outlined) {
