@@ -1,13 +1,15 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import Text from '../../components/text/text';
+import Container from '../../components/container/container';
+
 import {useTranslation} from 'react-i18next';
 
 const Login = () => {
   const {t} = useTranslation();
   return (
-    <View>
-      <Text>{t('login.title')}</Text>
-    </View>
+    <Container>
+      <Text type="headline">{t('login.title')}</Text>
+    </Container>
   );
 };
 
