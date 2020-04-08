@@ -1,4 +1,13 @@
+import {hasNotch} from 'react-native-device-info';
 import DefaultTheme from '../themes/default';
+import {Platform} from 'react-native';
+
+const height = () => {
+  if (Platform.OS === 'ios' && hasNotch()) {
+    return 100;
+  }
+  return 50;
+};
 
 export const emptyHeader = () => ({
   title: '',
@@ -7,7 +16,7 @@ export const emptyHeader = () => ({
     shadowColor: 'transparent',
     elevation: 0,
     borderBottomWidth: 0,
-    height: 100,
+    height: height(),
   },
 });
 

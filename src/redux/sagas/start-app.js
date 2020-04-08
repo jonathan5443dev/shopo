@@ -1,11 +1,15 @@
-import {takeLatest} from 'redux-saga/effects';
+import {takeLatest, delay} from 'redux-saga/effects';
 import App from '../../config/app';
+import SplashScreen from 'react-native-splash-screen';
 
 function* startApplicationFlow() {
+  yield delay(100);
   try {
-    App.navigation.navigate('Home');
+    App.navigation.navigate('Login');
+    SplashScreen.hide();
   } catch (e) {
-    App.navigation.navigate('Home');
+    App.navigation.navigate('Login');
+    SplashScreen.hide();
   }
 }
 
