@@ -4,13 +4,11 @@ import {
   InputField,
   ErrorMessage,
   InputContainer,
-  ErrorIcon,
   Icon,
   IconContainer,
   Label,
   LabelContainer,
 } from './styles';
-// import ErrorImage from '../../assets/images/error.png';
 import theme from '../../config/themes/default';
 
 const Input = props => {
