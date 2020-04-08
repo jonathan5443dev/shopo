@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import theme from '../../config/themes/default';
 
 const styleByType = type => {
   switch (type) {
@@ -47,6 +48,6 @@ const styleByType = type => {
 };
 
 export const FancyText = styled.Text`
-  font-family: Metropolis;
+  font-family: ${theme.fontFamily};
   ${$props => styleByType($props.type)}
 `;
