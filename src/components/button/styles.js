@@ -22,7 +22,7 @@ export const ButtonContainer = styled.TouchableOpacity`
   border-radius: 25px;
   height: 40px;
   padding: 13px;
-  shadow-color: ${props => theme.black};
+  shadow-color: ${theme.black};
   shadow-offset: 0px 4px;
   shadow-opacity: 0.1;
   shadow-radius: 2.84px;
