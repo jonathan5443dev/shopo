@@ -21,7 +21,7 @@ const RootComponent = () => {
     App.boot().then(() => {
       setIsReady(true);
       disableFontScaling();
-      App.redux.store.dispatch(startAppActions.startAppFlow());
+      // App.redux.store.dispatch(startAppActions.startAppFlow());
     });
   }, []);
 

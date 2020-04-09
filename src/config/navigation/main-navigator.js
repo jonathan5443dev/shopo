@@ -7,11 +7,16 @@ import {createStackNavigator} from 'react-navigation-stack';
 import DefaultTheme from '../themes/default';
 import {emptyHeader} from './styles';
 import Login from '../../screens/login/login';
+import SingUp from '../../screens/sing-up/sing-up';
 import Home from '../../screens/home/home';
 
 import TabIcon from '../../components/tab-icon/tab-icon';
 
 const AppNavigator = createStackNavigator({
+  SingUp: {
+    screen: SingUp,
+    navigationOptions: () => emptyHeader(),
+  },
   Login: {
     screen: Login,
     navigationOptions: () => emptyHeader(),

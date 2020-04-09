@@ -5,10 +5,10 @@ import SplashScreen from 'react-native-splash-screen';
 function* startApplicationFlow() {
   yield delay(100);
   try {
-    App.navigation.navigate('Login');
+    App.navigation.navigate('SingUp');
     SplashScreen.hide();
   } catch (e) {
-    App.navigation.navigate('Login');
+    App.navigation.navigate('SingUp');
     SplashScreen.hide();
   }
 }
