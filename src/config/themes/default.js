@@ -4,5 +4,7 @@ export default {
   black: '#222222',
   gray: '#9B9B9B',
   white: '#F9F9F9',
-  fontFamily: 'Metropolis',
+  fontFamily: 'Metropolis-Regular',
+  fontFamilyBold: 'Metropolis-Bold',
+  fontFamilySemiBold: 'Metropolis-SemiBold',
 };

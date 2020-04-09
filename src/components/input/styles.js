@@ -14,7 +14,7 @@ export const InputContainer = styled.View`
   shadow-offset: 0px 4px;
   shadow-opacity: 0.1;
   shadow-radius: 2.84px;
-  elevation: 5;
+  elevation: 3;
 `;
 export const IconContainer = styled.View`
   padding: 10px;
