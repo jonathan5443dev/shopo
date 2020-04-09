@@ -10,24 +10,25 @@ import {
   SocialCopy,
   SocialLogin,
   SocialButton,
-  ForgotPassword,
   SocialButtonImage,
-  ForgotPasswordLink,
-  ForgotPasswordArrow,
+  TextContainer,
 } from './styles';
 import {useTranslation} from 'react-i18next';
 import FacebookIcon from '../../assets/images/facebook.png';
 import GoogleIcon from '../../assets/images/google.png';
 
-const SingUp = () => {
+const RecoveryPassword = () => {
   const {t} = useTranslation();
   return (
     <Container>
-      <Text type="headline">{t('singUp.title')}</Text>
+      <Text type="headline">{t('recoveryPassword.title')}</Text>
+      <TextContainer>
+        <Text type="body">{t('recoveryPassword.message')}</Text>
+      </TextContainer>
       <Form>
         <Formik
           validationSchema={validationSchema}
-          initialValues={{email: '', password: '', username: ''}}
+          initialValues={{email: '', password: ''}}
           onSubmit={values => console.log(values)}>
           {({
             handleChange,
@@ -39,39 +40,20 @@ const SingUp = () => {
           }) => (
             <>
               <Input
-                onChangeText={handleChange('username')}
-                value={values.username}
-                error={touched.username && errors.username}
-                label="Username"
-              />
-              <Input
                 onChangeText={handleChange('email')}
                 value={values.email}
                 error={touched.email && errors.email}
                 label="Email"
               />
-              <Input
-                onChangeText={handleChange('password')}
-                value={values.password}
-                secureTextEntry={true}
-                error={touched.password && errors.password}
-                label="Password"
-              />
-              <ForgotPasswordLink>
-                <ForgotPassword>
-                  {t('singUp.haveAccount')}
-                </ForgotPassword>
-                <ForgotPasswordArrow>&#8594;</ForgotPasswordArrow>
-              </ForgotPasswordLink>
               <Button
-                value={t('singUp.submit')}
+                value={t('recoveryPassword.submit')}
                 onPress={handleSubmit}
               />
             </>
           )}
         </Formik>
       </Form>
-      <SocialCopy>{t('singUp.socialCopy')}</SocialCopy>
+      <SocialCopy>{t('login.socialCopy')}</SocialCopy>
       <SocialLogin>
         <SocialButton>
           <SocialButtonImage source={FacebookIcon} />
@@ -84,4 +66,4 @@ const SingUp = () => {
   );
 };
 
-export default SingUp;
+export default RecoveryPassword;

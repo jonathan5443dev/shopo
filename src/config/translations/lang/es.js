@@ -10,6 +10,16 @@ export default {
     },
   },
   recoveryPassword: {
+    title: 'Recuperar constraseña',
+    message: `Por favor, introdcue tu email. 
+      Recibiras un link para recuperar contraseña`,
+    submit: 'enviar',
+    validations: {
+      invalid: 'Invalid format',
+      required: 'Required',
+    },
+  },
+  singUp: {
     title: 'Registro',
     submit: 'Registrar',
     haveAccount: 'Ya tengo una cuenta',
