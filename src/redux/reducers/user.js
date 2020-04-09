@@ -4,6 +4,8 @@ const {Types, Creators} = createActions({
   setUserData: ['name', 'last_name', 'email', 'phone_number', 'proprietary'],
   setUserAuthentication: ['authentication'],
   clearUserData: [],
+  startRecoveryPasswordFlow: [],
+  startSingUpFlow: [],
 });
 
 export default Creators;
