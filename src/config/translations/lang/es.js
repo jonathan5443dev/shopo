@@ -9,4 +9,14 @@ export default {
       required: 'Requerido',
     },
   },
+  recoveryPassword: {
+    title: 'Recuperar constraseña',
+    message: `Por favor, introdcue tu email. 
+      Recibiras un link para recuperar contraseña`,
+    submit: 'enviar',
+    validations: {
+      invalid: 'Invalid format',
+      required: 'Required',
+    },
+  },
 };

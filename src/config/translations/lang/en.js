@@ -9,4 +9,13 @@ export default {
       required: 'Required',
     },
   },
+  recoveryPassword: {
+    title: 'Forgot password',
+    message: `Please, enter your email address. You will receive a link to create a new password via email`,
+    submit: 'send',
+    validations: {
+      invalid: 'Invalid format',
+      required: 'Required',
+    },
+  },
 };
