@@ -19,4 +19,10 @@ export default {
       required: 'Required',
     },
   },
+  singUp: {
+    title: 'Registro',
+    submit: 'Registrar',
+    haveAccount: 'Ya tengo una cuenta',
+    socialCopy: 'O registrarse con redes sociales',
+  },
 };

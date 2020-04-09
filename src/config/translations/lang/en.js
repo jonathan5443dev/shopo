@@ -18,4 +18,10 @@ export default {
       required: 'Required',
     },
   },
+  singUp: {
+    title: 'Sing up',
+    submit: 'sing up',
+    haveAccount: 'Already have an account?',
+    socialCopy: 'Or sing up with social account',
+  },
 };

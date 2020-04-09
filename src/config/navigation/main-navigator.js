@@ -8,6 +8,7 @@ import DefaultTheme from '../themes/default';
 import {emptyHeader} from './styles';
 import Login from '../../screens/login/login';
 import RecoveryPassword from '../../screens/recovery-password/recovery-password';
+import SingUp from '../../screens/sing-up/sing-up';
 import Home from '../../screens/home/home';
 
 import TabIcon from '../../components/tab-icon/tab-icon';
@@ -15,6 +16,10 @@ import TabIcon from '../../components/tab-icon/tab-icon';
 const AppNavigator = createStackNavigator({
   RecoveryPassword: {
     screen: RecoveryPassword,
+    navigationOptions: () => emptyHeader(),
+  },
+  SingUp: {
+    screen: SingUp,
     navigationOptions: () => emptyHeader(),
   },
   Login: {
