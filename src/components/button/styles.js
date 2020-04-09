@@ -20,8 +20,8 @@ export const ButtonContainer = styled.TouchableOpacity`
   align-self: center;
   width: 100%;
   border-radius: 25px;
-  height: 40px;
-  padding: 13px;
+  height: 48px;
+  padding: 10px;
   shadow-color: ${theme.black};
   shadow-offset: 0px 4px;
   shadow-opacity: 0.1;
@@ -36,6 +36,7 @@ export const ButtonContainer = styled.TouchableOpacity`
 export const ButtonText = styled.Text`
   color: ${props => (props.color === 'primary' ? theme.white : theme.black)};
   text-align: center;
+  text-transform: uppercase
   font-size: 16px;
 `;
 
