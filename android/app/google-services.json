@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "268766297911",
+    "firebase_url": "https://shopo-2c6f2.firebaseio.com",
+    "project_id": "shopo-2c6f2",
+    "storage_bucket": "shopo-2c6f2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:268766297911:android:00fb4e4e9edac75c92e4b2",
+        "android_client_info": {
+          "package_name": "com.shopo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "268766297911-kdfrc9o1vdiob221mct1hv5bch5j2inl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDb7T1EO0h_x_7khKyeD6Zer6Z94CGnIWg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "268766297911-kdfrc9o1vdiob221mct1hv5bch5j2inl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
