@@ -10,10 +10,15 @@ import Login from '../../screens/login/login';
 import RecoveryPassword from '../../screens/recovery-password/recovery-password';
 import SingUp from '../../screens/sing-up/sing-up';
 import Home from '../../screens/home/home';
+import ProductCarousel from '../../components/products-carousel/products-carousel';
 
 import TabIcon from '../../components/tab-icon/tab-icon';
 
 const AppNavigator = createStackNavigator({
+  Product: {
+    screen: ProductCarousel,
+    navigationOptions: () => emptyHeader(),
+  },
   RecoveryPassword: {
     screen: RecoveryPassword,
     navigationOptions: () => emptyHeader(),

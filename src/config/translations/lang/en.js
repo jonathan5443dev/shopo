@@ -24,4 +24,5 @@ export default {
     haveAccount: 'Already have an account?',
     socialCopy: 'Or sing up with social account',
   },
+  viewAll: 'View all',
 };

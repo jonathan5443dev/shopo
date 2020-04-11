@@ -39,6 +39,12 @@ const styleByType = type => {
         'font-size': '14px',
         'line-height': '1.5px',
       };
+    case 'crossed':
+      return {
+        'font-family': theme.fontFamily,
+        'font-size': '14px',
+        'text-decoration': 'line-through',
+      };
     default:
       return {
         'font-family': theme.fontFamily,
@@ -49,4 +55,7 @@ const styleByType = type => {
 
 export const FancyText = styled.Text`
   ${$props => styleByType($props.type)}
+  color: ${props => theme[props.color]};
+  text-decoration-color: ${props => theme[props.color]};
+  margin-vertical: 3px;
 `;
