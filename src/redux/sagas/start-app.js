@@ -8,6 +8,7 @@ function* startApplicationFlow() {
     App.navigation.navigate('SingUp');
     SplashScreen.hide();
   } catch (e) {
+    App.firebase.crashlytics.recordError(new Error('hello error'));
     App.navigation.navigate('SingUp');
     SplashScreen.hide();
   }

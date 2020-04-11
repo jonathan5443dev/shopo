@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>268766297911-vivtgkrnhcl6k4l94jut60kiqhauuj0h.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.268766297911-vivtgkrnhcl6k4l94jut60kiqhauuj0h</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC7rf7TmvUZP8UFXwonVr1-V8cor5PWRqs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>268766297911</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.shopo</string>
+	<key>PROJECT_ID</key>
+	<string>shopo-2c6f2</string>
+	<key>STORAGE_BUCKET</key>
+	<string>shopo-2c6f2.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:268766297911:ios:236f8740552e8bf192e4b2</string>
+	<key>DATABASE_URL</key>
+	<string>https://shopo-2c6f2.firebaseio.com</string>
+</dict>
+</plist>
