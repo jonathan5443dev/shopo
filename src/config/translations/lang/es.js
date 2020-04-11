@@ -25,4 +25,5 @@ export default {
     haveAccount: 'Ya tengo una cuenta',
     socialCopy: 'O registrarse con redes sociales',
   },
+  viewAll: 'Ver todos',
 };
