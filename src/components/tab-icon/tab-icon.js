@@ -2,15 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {ImageContainer, Image} from './styles';
 import HomeIcon from '../../assets/images/home.png';
-import ProfileIcon from '../../assets/images/profile.png';
+import AccountIcon from '../../assets/images/profile.png';
+import BagIcon from '../../assets/images/bag.png';
+import FavoritesIcon from '../../assets/images/favorites.png';
 
 const TabIcon = ({name, color, focused}) => {
   const sourceFinder = () => {
     switch (name) {
       case 'Home':
         return HomeIcon;
-      case 'Profile':
-        return ProfileIcon;
+      case 'Bag':
+        return BagIcon;
+      case 'Account':
+        return AccountIcon;
+      case 'Favorites':
+        return FavoritesIcon;
       default:
         return HomeIcon;
     }
