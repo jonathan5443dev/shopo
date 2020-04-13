@@ -1,4 +1,10 @@
 export default {
+  bag: {
+    title: 'Bag',
+    detail: 'Detail: ',
+    checkout: 'Check out',
+    total: 'Total amount',
+  },
   login: {
     title: 'Login',
     submit: 'Login',

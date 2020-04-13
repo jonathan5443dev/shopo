@@ -6,7 +6,7 @@ export const ImageContainer = styled.View`
 `;
 
 export const Image = styled.Image`
-  height: 40;
+  height: 40px;
   resize-mode: contain;
   tint-color: ${props => props.color};
 `;

@@ -1,6 +1,10 @@
+/* eslint-disable react-native/no-inline-styles */
+import React from 'react';
 import {hasNotch} from 'react-native-device-info';
 import DefaultTheme from '../themes/default';
-import {Platform} from 'react-native';
+import {Platform, TouchableOpacity} from 'react-native';
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import {faSearch, faChevronLeft} from '@fortawesome/free-solid-svg-icons';
 
 const height = () => {
   if (Platform.OS === 'ios' && hasNotch()) {
@@ -18,6 +22,27 @@ export const emptyHeader = () => ({
     borderBottomWidth: 0,
     height: height(),
   },
+});
+
+export const searchHeader = navigation => ({
+  title: '',
+  headerStyle: {
+    backgroundColor: DefaultTheme.background,
+    shadowColor: 'transparent',
+    elevation: 0,
+    borderBottomWidth: 0,
+    height: height(),
+  },
+  headerLeft: () => (
+    <TouchableOpacity onPress={() => navigation.goBack()}>
+      <FontAwesomeIcon icon={faChevronLeft} style={{marginLeft: 16}} />
+    </TouchableOpacity>
+  ),
+  headerRight: () => (
+    <TouchableOpacity onPress={() => {}}>
+      <FontAwesomeIcon icon={faSearch} style={{marginRight: 16}} />
+    </TouchableOpacity>
+  ),
 });
 
 export default emptyHeader;

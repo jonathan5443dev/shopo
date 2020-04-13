@@ -5,11 +5,13 @@ import {createBottomTabNavigator} from 'react-navigation-tabs';
 import {createStackNavigator} from 'react-navigation-stack';
 
 import DefaultTheme from '../themes/default';
-import {emptyHeader} from './styles';
+import {emptyHeader, searchHeader} from './styles';
 import Login from '../../screens/login/login';
 import RecoveryPassword from '../../screens/recovery-password/recovery-password';
 import SingUp from '../../screens/sing-up/sing-up';
 import Home from '../../screens/home/home';
+import Bag from '../../screens/bag/bag';
+
 import ProductCarousel from '../../components/products-carousel/products-carousel';
 
 import TabIcon from '../../components/tab-icon/tab-icon';
@@ -36,10 +38,10 @@ const AppNavigator = createStackNavigator({
       Home: {
         screen: Home,
       },
-      ShoppingCart: {
-        screen: Home,
+      Bag: {
+        screen: Bag,
       },
-      Help: {
+      Favorites: {
         screen: Home,
       },
       Account: {
@@ -55,14 +57,14 @@ const AppNavigator = createStackNavigator({
           );
         },
       }),
+      navigationOptions: ({navigation}) => searchHeader(navigation),
       tabBarOptions: {
         inactiveTintColor: DefaultTheme.gray,
         activeTintColor: DefaultTheme.primary,
-        showLabel: false,
         keyboardHidesTabBar: true,
         style: {
           height: 64,
-          backgroundColor: 'transparent',
+          backgroundColor: '#ffffff',
           borderTopColor: 'transparent',
         },
       },

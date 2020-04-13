@@ -1,4 +1,9 @@
 export default {
+  bag: {
+    title: 'Carrito de compra',
+    detail: 'Detalle: ',
+    checkout: 'Continuar',
+  },
   login: {
     title: 'Login',
     submit: 'Iniciar sesion',
