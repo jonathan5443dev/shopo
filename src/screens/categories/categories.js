@@ -15,7 +15,7 @@ const Categories = ({categories}) => {
             <View
               key={`${element}-${index}`}
               tabLabel={`${element.categoryName}`}>
-              <Tags.CategoryContainer>
+              <Tags.CategoryContainer key={`${element.categoryName}-${index}`}>
                 {element.subcategories.map((subcategory, i) => (
                   <Category subcategory={subcategory} index={i} />
                 ))}
@@ -46,7 +46,7 @@ Categories.defaultProps = {
         {
           id: 0,
           subCategoryName: 'SUMMER SALES',
-          discountPercentage: 50,
+          discountMessage: 'Up to 20% off',
           imageUrl: null,
           type: 'offer',
         },
@@ -54,20 +54,20 @@ Categories.defaultProps = {
           id: 1,
           subCategoryName: 'potato 1',
           imageUrl: 'https://wwww.potato.com',
-          discountPercentage: null,
+          discountMessage: null,
           type: 'regular',
         },
         {
           id: 2,
           subCategoryName: 'potato 2',
           imageUrl: 'https://wwww.potato.com',
-          discountPercentage: null,
+          discountMessage: null,
           type: 'regular',
         },
         {
           id: 4,
           subCategoryName: 'SUMMER SALES',
-          discountPercentage: 50,
+          discountMessage: 'Up to 70% off',
           imageUrl: null,
           type: 'offer',
         },
@@ -75,21 +75,21 @@ Categories.defaultProps = {
           id: 5,
           subCategoryName: 'potato 2',
           imageUrl: 'https://wwww.potato.com',
-          discountPercentage: null,
+          discountMessage: null,
           type: 'regular',
         },
         {
           id: 6,
           subCategoryName: 'potato 2',
           imageUrl: 'https://wwww.potato.com',
-          discountPercentage: null,
+          discountMessage: null,
           type: 'regular',
         },
         {
           id: 7,
           subCategoryName: 'potato 2',
           imageUrl: 'https://wwww.potato.com',
-          discountPercentage: null,
+          discountMessage: null,
           type: 'regular',
         },
       ],
@@ -101,7 +101,7 @@ Categories.defaultProps = {
         {
           id: 0,
           subCategoryName: 'SUMMER SALES',
-          discountPercentage: 50,
+          discountMessage: 'Up to 50% off',
           imageUrl: null,
           type: 'offer',
         },
@@ -109,20 +109,20 @@ Categories.defaultProps = {
           id: 1,
           subCategoryName: 'potato 1',
           imageUrl: 'https://wwww.potato.com',
-          discountPercentage: null,
+          discountMessage: null,
           type: 'regular',
         },
         {
           id: 2,
           subCategoryName: 'potato 2',
           imageUrl: 'https://wwww.potato.com',
-          discountPercentage: null,
+          discountMessage: null,
           type: 'regular',
         },
         {
           id: 4,
           subCategoryName: 'SUMMER SALES',
-          discountPercentage: 50,
+          discountMessage: 'Up to 50% off',
           imageUrl: null,
           type: 'offer',
         },

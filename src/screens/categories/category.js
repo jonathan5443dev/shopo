@@ -11,7 +11,7 @@ const Category = ({subcategory, index}) => {
       <Tags.CategoryTabContainer
         key={`${subcategory.subCategoryName}-${index}`}>
         <Tags.CategoryTab>
-          <Text type="headline 3">Category #1</Text>
+          <Text type="headline 3">{subcategory.subCategoryName}</Text>
         </Tags.CategoryTab>
       </Tags.CategoryTabContainer>
     );
@@ -21,9 +21,9 @@ const Category = ({subcategory, index}) => {
     <Tags.CategoryTabContainer key={`${subcategory.subCategoryName}-${index}`}>
       <Tags.SummerSalesContainer>
         <Text color="white" type="headline 3">
-          SUMMER SALES
+          {subcategory.subCategoryName}
         </Text>
-        <Text color="white">Up to 50% off</Text>
+        <Text color="white">{subcategory.discountMessage}</Text>
       </Tags.SummerSalesContainer>
     </Tags.CategoryTabContainer>
   );
@@ -34,7 +34,7 @@ Category.propTypes = {
     id: PropTypes.number.isRequired,
     subCategoryName: PropTypes.string.isRequired,
     imageUrl: PropTypes.string,
-    discountPercentage: PropTypes.number,
+    discountMessage: PropTypes.string,
     type: PropTypes.string.isRequired,
   }).isRequired,
   index: PropTypes.number.isRequired,
@@ -43,7 +43,7 @@ Category.propTypes = {
 Category.defaultProps = {
   subcategory: {
     imageUrl: null,
-    discountPercentage: null,
+    discountMessage: null,
   },
 };
 
