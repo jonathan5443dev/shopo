@@ -12,6 +12,7 @@ import SingUp from '../../screens/sing-up/sing-up';
 import Home from '../../screens/home/home';
 import Bag from '../../screens/bag/bag';
 import Categories from '../../screens/categories/categories';
+import Profile from '../../screens/profile/profile';
 
 import ProductCarousel from '../../components/products-carousel/products-carousel';
 
@@ -38,6 +39,7 @@ const AppNavigator = createStackNavigator({
     {
       Home: {
         screen: Home,
+        navigationOptions: () => emptyHeader(),
       },
       Categories: {
         screen: Categories,
@@ -49,7 +51,7 @@ const AppNavigator = createStackNavigator({
         screen: Home,
       },
       Account: {
-        screen: Home,
+        screen: Profile,
       },
     },
     {
