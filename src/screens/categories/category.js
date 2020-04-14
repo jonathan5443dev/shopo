@@ -1,12 +1,24 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Text from '../../components/text/text';
 
 import * as Tags from './styles';
 
-const Category = () => (
-  <Tags.CategoryContainer>
-    <Tags.CategoryTabContainer>
+const Category = ({subcategory, index}) => {
+  if (subcategory.type === 'regular') {
+    return (
+      <Tags.CategoryTabContainer
+        key={`${subcategory.subCategoryName}-${index}`}>
+        <Tags.CategoryTab>
+          <Text type="headline 3">Category #1</Text>
+        </Tags.CategoryTab>
+      </Tags.CategoryTabContainer>
+    );
+  }
+
+  return (
+    <Tags.CategoryTabContainer key={`${subcategory.subCategoryName}-${index}`}>
       <Tags.SummerSalesContainer>
         <Text color="white" type="headline 3">
           SUMMER SALES
@@ -14,32 +26,25 @@ const Category = () => (
         <Text color="white">Up to 50% off</Text>
       </Tags.SummerSalesContainer>
     </Tags.CategoryTabContainer>
-    <Tags.CategoryTabContainer>
-      <Tags.CategoryTab>
-        <Text type="headline 3">Category #1</Text>
-      </Tags.CategoryTab>
-    </Tags.CategoryTabContainer>
-    <Tags.CategoryTabContainer>
-      <Tags.CategoryTab>
-        <Text type="headline 3">Category #2</Text>
-      </Tags.CategoryTab>
-    </Tags.CategoryTabContainer>
-    <Tags.CategoryTabContainer>
-      <Tags.CategoryTab>
-        <Text type="headline 3">Category #3</Text>
-      </Tags.CategoryTab>
-    </Tags.CategoryTabContainer>
-    <Tags.CategoryTabContainer>
-      <Tags.CategoryTab>
-        <Text type="headline 3">Category #4</Text>
-      </Tags.CategoryTab>
-    </Tags.CategoryTabContainer>
-    <Tags.CategoryTabContainer>
-      <Tags.CategoryTab>
-        <Text type="headline 3">Category #5</Text>
-      </Tags.CategoryTab>
-    </Tags.CategoryTabContainer>
-  </Tags.CategoryContainer>
-);
+  );
+};
+
+Category.propTypes = {
+  subcategory: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    subCategoryName: PropTypes.string.isRequired,
+    imageUrl: PropTypes.string,
+    discountPercentage: PropTypes.number,
+    type: PropTypes.string.isRequired,
+  }).isRequired,
+  index: PropTypes.number.isRequired,
+};
+
+Category.defaultProps = {
+  subcategory: {
+    imageUrl: null,
+    discountPercentage: null,
+  },
+};
 
 export default Category;
