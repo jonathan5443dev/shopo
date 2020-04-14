@@ -5,7 +5,7 @@ export const Container = styled.View`
   height: 260px;
   width: 160px;
   border-radius: 15px;
-  margin: 10px;
+  margin-right: 10px;
 `;
 
 export const Discount = styled.View`
