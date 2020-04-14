@@ -37,6 +37,7 @@ const AppNavigator = createStackNavigator({
     {
       Home: {
         screen: Home,
+        navigationOptions: () => emptyHeader(),
       },
       Bag: {
         screen: Bag,
