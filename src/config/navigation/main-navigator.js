@@ -14,6 +14,7 @@ import Bag from '../../screens/bag/bag';
 import Addresses from '../../screens/addresses/addresses';
 import Categories from '../../screens/categories/categories';
 import Profile from '../../screens/profile/profile';
+import CategoryDetail from '../../screens/category-detail/category-detail';
 
 import ProductCarousel from '../../components/products-carousel/products-carousel';
 
@@ -47,9 +48,13 @@ const AppNavigator = createStackNavigator({
         screen: Home,
         navigationOptions: () => emptyHeader(),
       },
-      Categories: {
-        screen: Categories,
-      },
+      Categories: createStackNavigator({
+        Categories: {screen: Categories},
+        CategoryDetail: {
+          screen: CategoryDetail,
+          navigationOptions: () => emptyHeader(),
+        },
+      }),
       Bag: {
         screen: Bag,
       },
