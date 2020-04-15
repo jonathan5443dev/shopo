@@ -1,4 +1,8 @@
 export default {
+  addresses: {
+    default: 'Usa esta direccion por defecto',
+    edit: 'Editar',
+  },
   bag: {
     title: 'Carrito de compra',
     detail: 'Detalle: ',
