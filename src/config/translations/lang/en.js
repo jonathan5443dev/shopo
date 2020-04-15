@@ -1,4 +1,8 @@
 export default {
+  addresses: {
+    default: 'Use as the shipping address',
+    edit: 'Edit',
+  },
   bag: {
     title: 'Bag',
     detail: 'Detail: ',

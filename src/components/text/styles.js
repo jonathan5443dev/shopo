@@ -37,7 +37,6 @@ const styleByType = type => {
       return {
         'font-family': theme.fontFamily,
         'font-size': '14px',
-        'line-height': '1.5px',
       };
     case 'crossed':
       return {

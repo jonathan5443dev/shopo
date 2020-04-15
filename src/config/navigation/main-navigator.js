@@ -5,12 +5,13 @@ import {createBottomTabNavigator} from 'react-navigation-tabs';
 import {createStackNavigator} from 'react-navigation-stack';
 
 import DefaultTheme from '../themes/default';
-import {emptyHeader, searchHeader} from './styles';
+import {emptyHeader, searchHeader, titleHeader} from './styles';
 import Login from '../../screens/login/login';
 import RecoveryPassword from '../../screens/recovery-password/recovery-password';
 import SingUp from '../../screens/sing-up/sing-up';
 import Home from '../../screens/home/home';
 import Bag from '../../screens/bag/bag';
+import Addresses from '../../screens/addresses/addresses';
 
 import ProductCarousel from '../../components/products-carousel/products-carousel';
 
@@ -32,6 +33,11 @@ const AppNavigator = createStackNavigator({
   Login: {
     screen: Login,
     navigationOptions: () => emptyHeader(),
+  },
+  Addresses: {
+    screen: Addresses,
+    navigationOptions: ({navigation}) =>
+      titleHeader(navigation, 'Shipping Addresses'),
   },
   Home: createBottomTabNavigator(
     {

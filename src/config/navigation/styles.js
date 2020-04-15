@@ -24,6 +24,22 @@ export const emptyHeader = () => ({
   },
 });
 
+export const titleHeader = (navigation, title) => ({
+  title,
+  headerStyle: {
+    backgroundColor: '#ffffff',
+    elevation: 1,
+    borderBottomWidth: 0,
+    height: height(),
+  },
+
+  headerLeft: () => (
+    <TouchableOpacity onPress={() => navigation.goBack()}>
+      <FontAwesomeIcon icon={faChevronLeft} style={{marginLeft: 16}} />
+    </TouchableOpacity>
+  ),
+});
+
 export const searchHeader = navigation => ({
   title: '',
   headerStyle: {

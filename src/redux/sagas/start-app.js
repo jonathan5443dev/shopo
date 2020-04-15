@@ -5,7 +5,7 @@ import SplashScreen from 'react-native-splash-screen';
 function* startApplicationFlow() {
   yield delay(100);
   try {
-    App.navigation.navigate('Bag');
+    App.navigation.navigate('Addresses');
     SplashScreen.hide();
   } catch (e) {
     App.firebase.crashlytics.recordError(new Error('hello error'));
