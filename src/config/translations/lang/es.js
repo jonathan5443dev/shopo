@@ -8,6 +8,17 @@ export default {
     detail: 'Detalle: ',
     checkout: 'Continuar',
   },
+  profile: {
+    title: 'Mi perfil',
+    shippingAddresses: 'Direcciones de envio',
+    addresses: 'direcciones',
+    myOrders: 'Mis ordenes',
+    orders: 'ordenes',
+    settings: 'Configuracion',
+    notificationsPassword: 'Notificaciones, contraseña',
+    logout: 'Cerrar sesion',
+    logoutSubtitle: 'Lorem ipsum ammet',
+  },
   login: {
     title: 'Login',
     submit: 'Iniciar sesion',

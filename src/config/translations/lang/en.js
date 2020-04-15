@@ -9,6 +9,17 @@ export default {
     checkout: 'Check out',
     total: 'Total amount',
   },
+  profile: {
+    title: 'My profile',
+    shippingAddresses: 'Shipping addresses',
+    addresses: 'addresses',
+    myOrders: 'My orders',
+    orders: 'orders',
+    settings: 'Settings',
+    notificationsPassword: 'Notifications, password',
+    logout: 'Logout',
+    logoutSubtitle: 'Lorem ipsum ammet',
+  },
   login: {
     title: 'Login',
     submit: 'Login',
