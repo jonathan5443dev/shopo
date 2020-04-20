@@ -1,4 +1,12 @@
 export default {
+  createAddress: {
+    saveAddress: 'Save address',
+    name: 'Full Name',
+    address: 'Address',
+    city: 'City',
+    state: 'State/Province/Region',
+    country: 'Country',
+  },
   addresses: {
     default: 'Use as the shipping address',
     edit: 'Edit',
