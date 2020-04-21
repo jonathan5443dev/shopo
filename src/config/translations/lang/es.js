@@ -1,4 +1,12 @@
 export default {
+  createAddress: {
+    saveAddress: 'Guardar direccion',
+    name: 'Nombre completo',
+    address: 'Direccion',
+    city: 'Ciudad',
+    state: 'Estado/Provincia/Departamento',
+    country: 'Pais',
+  },
   addresses: {
     default: 'Usa esta direccion por defecto',
     edit: 'Editar',
@@ -7,6 +15,7 @@ export default {
     title: 'Carrito de compra',
     detail: 'Detalle: ',
     checkout: 'Continuar',
+    total: 'Total ',
   },
   profile: {
     title: 'Mi perfil',

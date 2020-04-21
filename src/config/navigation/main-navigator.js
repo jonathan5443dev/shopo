@@ -12,6 +12,8 @@ import SingUp from '../../screens/sing-up/sing-up';
 import Home from '../../screens/home/home';
 import Bag from '../../screens/bag/bag';
 import Addresses from '../../screens/addresses/addresses';
+import CreateAddress from '../../screens/create-address/create-address';
+
 import Categories from '../../screens/categories/categories';
 import Profile from '../../screens/profile/profile';
 import CategoryDetail from '../../screens/category-detail/category-detail';
@@ -41,6 +43,11 @@ const AppNavigator = createStackNavigator({
     screen: Addresses,
     navigationOptions: ({navigation}) =>
       titleHeader(navigation, 'Shipping Addresses'),
+  },
+  CreateAddress: {
+    screen: CreateAddress,
+    navigationOptions: ({navigation}) =>
+      titleHeader(navigation, 'Adding Shipping Address'),
   },
   Home: createBottomTabNavigator(
     {
