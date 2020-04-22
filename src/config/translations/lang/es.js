@@ -55,4 +55,14 @@ export default {
     socialCopy: 'O registrarse con redes sociales',
   },
   viewAll: 'Ver todos',
+  checkout: {
+    change: 'Cambiar',
+    shippingAddress: 'Dirección de Envío',
+    payment: 'Método de pago',
+    deliveryMethod: 'Método de entrega',
+    submitOrder: 'Enviar orden',
+    summary: 'Resumen',
+    order: 'Orden',
+    delivery: 'Envio'
+  }
 };
