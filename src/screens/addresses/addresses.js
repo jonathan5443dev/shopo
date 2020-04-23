@@ -1,5 +1,4 @@
 import React from 'react';
-import {useTranslation} from 'react-i18next';
 import Container from '../../components/container/container';
 import AddressCard from '../../components/address-card/address-card';
 import {AddressList, AddButton} from './styles.js';
@@ -16,7 +15,6 @@ const mockedAddress = {
 };
 
 const Addresses = () => {
-  const {t} = useTranslation();
   return (
     <Container>
       <AddressList>

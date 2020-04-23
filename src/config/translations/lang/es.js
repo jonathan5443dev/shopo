@@ -1,4 +1,12 @@
 export default {
+  createAddress: {
+    saveAddress: 'Guardar direccion',
+    name: 'Nombre completo',
+    address: 'Direccion',
+    city: 'Ciudad',
+    state: 'Estado/Provincia/Departamento',
+    country: 'Pais',
+  },
   addresses: {
     default: 'Usa esta direccion por defecto',
     edit: 'Editar',
@@ -7,6 +15,7 @@ export default {
     title: 'Carrito de compra',
     detail: 'Detalle: ',
     checkout: 'Continuar',
+    total: 'Total ',
   },
   profile: {
     title: 'Mi perfil',
@@ -46,4 +55,14 @@ export default {
     socialCopy: 'O registrarse con redes sociales',
   },
   viewAll: 'Ver todos',
+  checkout: {
+    change: 'Cambiar',
+    shippingAddress: 'Dirección de Envío',
+    payment: 'Método de pago',
+    deliveryMethod: 'Método de entrega',
+    submitOrder: 'Enviar orden',
+    summary: 'Resumen',
+    order: 'Orden',
+    delivery: 'Envio'
+  }
 };

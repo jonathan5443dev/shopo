@@ -1,4 +1,12 @@
 export default {
+  createAddress: {
+    saveAddress: 'Save address',
+    name: 'Full Name',
+    address: 'Address',
+    city: 'City',
+    state: 'State/Province/Region',
+    country: 'Country',
+  },
   addresses: {
     default: 'Use as the shipping address',
     edit: 'Edit',
@@ -46,4 +54,14 @@ export default {
     socialCopy: 'Or sing up with social account',
   },
   viewAll: 'View all',
+  checkout: {
+    change: 'Change',
+    shippingAddress: 'Shipping Address',
+    payment: 'Payment',
+    deliveryMethod: 'Delivery method',
+    submitOrder: 'Submit Order',
+    summary: 'Summary',
+    order: 'Order',
+    delivery: 'Delivery'
+  }
 };

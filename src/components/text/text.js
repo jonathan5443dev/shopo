@@ -12,8 +12,14 @@ const Text = ({children, type, color}) => {
 };
 
 Text.propTypes = {
-  children: PropTypes.element.isRequired,
-  type: PropTypes.func,
+  children: PropTypes.oneOfType([
+    PropTypes.element.isRequired,
+    PropTypes.string
+  ]),
+  type: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.string
+  ]),
   color: PropTypes.string,
 };
 
