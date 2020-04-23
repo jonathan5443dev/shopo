@@ -15,6 +15,7 @@ import Addresses from '../../screens/addresses/addresses';
 import Categories from '../../screens/categories/categories';
 import Profile from '../../screens/profile/profile';
 import CategoryDetail from '../../screens/category-detail/category-detail';
+import ProductDetail from '../../screens/product-detail/product-detail';
 
 import ProductCarousel from '../../components/products-carousel/products-carousel';
 
@@ -59,7 +60,7 @@ const AppNavigator = createStackNavigator({
         screen: Bag,
       },
       Favorites: {
-        screen: Home,
+        screen: ProductDetail,
       },
       Account: {
         screen: Profile,
