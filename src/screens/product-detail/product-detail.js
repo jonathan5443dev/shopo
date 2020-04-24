@@ -13,6 +13,8 @@ import product2 from '../../assets/images/product2.png';
 import product3 from '../../assets/images/product1.png';
 import product4 from '../../assets/images/product2.png';
 
+import {useTranslation} from 'react-i18next';
+
 const sizeOptions = [
   {
     id: 1,
@@ -57,6 +59,7 @@ const images = [
 const ProductDetail = () => {
   const [modalSize, setModalSize] = useState(false);
   const [modalColor, setModalColor] = useState(false);
+  const {t} = useTranslation();
 
   return (
     <>
@@ -111,7 +114,7 @@ const ProductDetail = () => {
         />
       </Container>
       <Tags.ContainerButton>
-        <Button value="ADD TO CART" />
+        <Button value={t('addToCart')} />
       </Tags.ContainerButton>
     </>
   );

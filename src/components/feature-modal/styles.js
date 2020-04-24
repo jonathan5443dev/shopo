@@ -12,7 +12,7 @@ export const Content = styled.View`
   flex-direction: column;
 `;
 
-export const ModalCotainer = styled.View``;
+export const ModalContainer = styled.View``;
 
 export const Title = styled.Text``;
 

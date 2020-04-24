@@ -62,6 +62,7 @@ export default {
     submitOrder: 'Submit Order',
     summary: 'Summary',
     order: 'Order',
-    delivery: 'Delivery'
-  }
+    delivery: 'Delivery',
+  },
+  addToCart: 'Add to cart',
 };

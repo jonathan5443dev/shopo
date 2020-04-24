@@ -13,7 +13,7 @@ const FeatureModal = ({
   onRequestClose,
 }) => {
   return (
-    <Tags.ModalCotainer>
+    <Tags.ModalContainer>
       <Tags.Modal animationType="slide" transparent={true} visible={visible}>
         <Tags.Content>
           <Tags.FeatureContainer>
@@ -31,7 +31,7 @@ const FeatureModal = ({
           </Tags.FeatureContainer>
         </Tags.Content>
       </Tags.Modal>
-    </Tags.ModalCotainer>
+    </Tags.ModalContainer>
   );
 };
 

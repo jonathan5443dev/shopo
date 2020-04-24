@@ -63,6 +63,7 @@ export default {
     submitOrder: 'Enviar orden',
     summary: 'Resumen',
     order: 'Orden',
-    delivery: 'Envio'
-  }
+    delivery: 'Envio',
+  },
+  addToCart: 'Agregar al carrito',
 };
