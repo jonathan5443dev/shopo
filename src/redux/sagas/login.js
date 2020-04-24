@@ -3,7 +3,7 @@ import LoginActions from '../reducers/login';
 import App from '../../config/app';
 import UserActions from '../reducers/user';
 
-function* AuthenticateUser(action) {
+function* Login(action) {
   try {
     // call login service
     const authentication = yield call(
@@ -37,8 +37,18 @@ function* AuthenticateUser(action) {
   }
 }
 
-function* authenticateUserFlow() {
-  yield takeLatest('AUTHENTICATE_USER', AuthenticateUser);
+function* Logout(action) {
+  try {
+    yield put(UserActions.clearUserData());
+    App.navigation.navigate('Login');
+  } catch (e) {
+    alert(e);
+  }
 }
 
-export default authenticateUserFlow;
+function* loginFlows() {
+  yield takeLatest('LOGIN', Login);
+  yield takeLatest('LOGOUT', Logout);
+}
+
+export default loginFlows;

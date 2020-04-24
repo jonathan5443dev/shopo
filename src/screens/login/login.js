@@ -33,7 +33,7 @@ const Login = () => {
           validationSchema={validationSchema}
           initialValues={{email: '', password: ''}}
           onSubmit={values =>
-            dispatch(loginActions.authenticateUser('joans@gotm.com', 'asdasd'))
+            dispatch(loginActions.login(Object.values(values)))
           }>
           {({
             handleChange,

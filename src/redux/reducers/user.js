@@ -40,9 +40,8 @@ export const clearUser = () => {
     name: null,
     email: null,
     last_name: null,
-    proprietary: [],
     phoneNumber: null,
-    authentication: {},
+    authentication: '',
   };
 };
 

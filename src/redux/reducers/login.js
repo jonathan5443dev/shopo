@@ -1,9 +1,10 @@
 import {createActions, createReducer} from 'reduxsauce';
 
 const {Types, Creators} = createActions({
-  authenticateUser: ['email', 'password'],
   loginSuccess: [],
   loginFailed: ['error'],
+  logout: [],
+  login: ['email', 'password'],
 });
 
 export default Creators;

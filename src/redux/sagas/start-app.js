@@ -13,7 +13,6 @@ function* startApplicationFlow() {
     } else {
       App.navigation.navigate('Login');
     }
-    yield delay(100);
     SplashScreen.hide();
   } catch (e) {
     App.firebase.crashlytics.recordError(new Error('hello error'));
