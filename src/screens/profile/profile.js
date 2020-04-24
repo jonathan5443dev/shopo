@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from '../../components/container/container';
+import {useSelector} from 'react-redux';
 import Text from '../../components/text/text';
 import {useTranslation} from 'react-i18next';
 import AvatarImage from '../../assets/images/product-1.png';
@@ -7,6 +8,7 @@ import {List, Option, Header, Avatar, Information} from './styles';
 
 const Profile = () => {
   const {t} = useTranslation();
+  const user = useSelector(state => state.user);
   const options = [
     {
       id: '1',
@@ -45,8 +47,10 @@ const Profile = () => {
       <Header>
         <Avatar source={AvatarImage} />
         <Information>
-          <Text type="headline 3">Jonathan Buitrago Lopez</Text>
-          <Text> jonathan5443@gmail.com</Text>
+          <Text type="headline 3">
+            {user.name} {user.lastName}
+          </Text>
+          <Text> {user.email}</Text>
         </Information>
       </Header>
       <List

@@ -1,7 +1,7 @@
 import {createReducer, createActions} from 'reduxsauce';
 
 const {Types, Creators} = createActions({
-  setUserData: ['name', 'last_name', 'email', 'phone_number', 'proprietary'],
+  setUserData: ['name', 'last_name', 'email', 'phone_number'],
   setUserAuthentication: ['authentication'],
   clearUserData: [],
   startRecoveryPasswordFlow: [],
@@ -15,7 +15,7 @@ export const INITIAL_STATE = {
   email: null,
   last_name: null,
   phoneNumber: null,
-  authentication: {},
+  authentication: '',
 };
 
 export const setUser = (state = INITIAL_STATE, action) => {
@@ -43,7 +43,6 @@ export const clearUser = () => {
     proprietary: [],
     phoneNumber: null,
     authentication: {},
-    isEditingProfile: false,
   };
 };
 

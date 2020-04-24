@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import StoreLoader from './boot-loaders/store-loader';
 import ApiLoader from './boot-loaders/api-loader';
 import NavigationLoader from './boot-loaders/navigation-loader';
@@ -17,6 +16,6 @@ export default class App {
       .then(() => {
         secondaryLoaders.map(s => s.boot(App));
       })
-      .catch(err => console.error(`Error while booting the app`, err));
+      .catch(err => console.error('Error while booting the app', err));
   }
 }

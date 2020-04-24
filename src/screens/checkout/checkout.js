@@ -7,40 +7,42 @@ import ShippingAddressCard from '../../components/shipping-address-card/shipping
 import PaymentMethodList from '../../components/payment-method-list/payment-method-list';
 import DeliveryMethodCard from '../../components/delivery-method-card/delivery-method-card';
 
-import * as Tags from "./styles";
+import * as Tags from './styles';
 
 const mockUser = {
   name: 'Jane Doe',
   address: '3 Newbride Court',
   country: 'Chino Hills, CA 91709, United States',
-  paymentMethod: [{
-    id: "master",
-    finalNumbers: '3947',
-    entity: "mastercard"
-  }],
+  paymentMethod: [
+    {
+      id: 'master',
+      finalNumbers: '3947',
+      entity: 'mastercard',
+    },
+  ],
   deliveryMethodsAvailable: [
     {
-      id: "1",
-      name: "fedex",
-      time: " 1 - 3 days"
+      id: '1',
+      name: 'fedex',
+      time: ' 1 - 3 days',
     },
     {
-      id: "2",
-      name: "dhl",
-      time: " 3 - 5 days"
+      id: '2',
+      name: 'dhl',
+      time: ' 3 - 5 days',
     },
     {
-      id: "3",
-      name: "fedex",
-      time: " 10 - 20 days"
+      id: '3',
+      name: 'fedex',
+      time: ' 10 - 20 days',
     },
     {
-      id: "4",
-      name: "dhl",
-      time: " 10 - 20 days"
-    }
-  ]
-}
+      id: '4',
+      name: 'dhl',
+      time: ' 10 - 20 days',
+    },
+  ],
+};
 
 const Checkout = () => {
   const {t} = useTranslation();
@@ -55,21 +57,33 @@ const Checkout = () => {
       <DeliveryMethodCard deliveryMethods={mockUser.deliveryMethodsAvailable} />
       <Tags.OrderSummary>
         <Tags.AmountContainer>
-          <Text type="body" color="black">{t('checkout.order')}</Text>
-          <Text type="headline 3" color="black">12$</Text>
+          <Text type="body" color="black">
+            {t('checkout.order')}
+          </Text>
+          <Text type="headline 3" color="black">
+            12$
+          </Text>
         </Tags.AmountContainer>
         <Tags.AmountContainer>
-          <Text type="body" color="black">{t('checkout.delivery')}</Text>
-          <Text type="headline 3" color="black">15$</Text>
+          <Text type="body" color="black">
+            {t('checkout.delivery')}
+          </Text>
+          <Text type="headline 3" color="black">
+            15$
+          </Text>
         </Tags.AmountContainer>
         <Tags.AmountContainer>
-          <Text type="highlight" color="black">{t('checkout.summary')}</Text>
-          <Text type="headline 3" color="black">127$</Text>
+          <Text type="highlight" color="black">
+            {t('checkout.summary')}
+          </Text>
+          <Text type="headline 3" color="black">
+            127$
+          </Text>
         </Tags.AmountContainer>
         <Button value={t('checkout.submitOrder')} />
       </Tags.OrderSummary>
     </Container>
-  )
-}
+  );
+};
 
 export default Checkout;

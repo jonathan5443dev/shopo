@@ -1,11 +1,19 @@
-import {takeLatest, delay} from 'redux-saga/effects';
+import {takeLatest, select, delay} from 'redux-saga/effects';
 import App from '../../config/app';
 import SplashScreen from 'react-native-splash-screen';
+
+export const getAuthentication = state => state.user.authentication;
 
 function* startApplicationFlow() {
   yield delay(100);
   try {
-    App.navigation.navigate('Checkout');
+    const authentication = yield select(getAuthentication);
+    if (authentication !== '') {
+      App.navigation.navigate('Home');
+    } else {
+      App.navigation.navigate('Login');
+    }
+    yield delay(100);
     SplashScreen.hide();
   } catch (e) {
     App.firebase.crashlytics.recordError(new Error('hello error'));

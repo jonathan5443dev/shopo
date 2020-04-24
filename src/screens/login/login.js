@@ -1,5 +1,6 @@
 import React from 'react';
 import {Formik} from 'formik';
+import {useDispatch} from 'react-redux';
 import validationSchema from './schema.js';
 import Text from '../../components/text/text';
 import Input from '../../components/input/input';
@@ -18,9 +19,12 @@ import {
 import {useTranslation} from 'react-i18next';
 import FacebookIcon from '../../assets/images/facebook.png';
 import GoogleIcon from '../../assets/images/google.png';
+import loginActions from '../../redux/reducers/login';
 
 const Login = () => {
   const {t} = useTranslation();
+  const dispatch = useDispatch();
+
   return (
     <Container>
       <Text type="headline">{t('login.title')}</Text>
@@ -28,7 +32,9 @@ const Login = () => {
         <Formik
           validationSchema={validationSchema}
           initialValues={{email: '', password: ''}}
-          onSubmit={values => console.log(values)}>
+          onSubmit={values =>
+            dispatch(loginActions.authenticateUser('joans@gotm.com', 'asdasd'))
+          }>
           {({
             handleChange,
             handleBlur,

@@ -52,8 +52,7 @@ const AppNavigator = createStackNavigator({
   },
   Checkout: {
     screen: Checkout,
-    navigationOptions: ({navigation}) =>
-      titleHeader(navigation, 'Checkout'),
+    navigationOptions: ({navigation}) => titleHeader(navigation, 'Checkout'),
   },
   Home: createBottomTabNavigator(
     {
