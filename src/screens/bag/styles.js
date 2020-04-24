@@ -1,16 +1,15 @@
 import styled from 'styled-components/native';
 import theme from '../../config/themes/default';
-export const ProductContainer = styled.ScrollView`
+export const ProductContainer = styled.View`
   margin-vertical: 16px;
   max-height: 100%;
 `;
 
 export const Footer = styled.View`
-  width: 110%;
+  width: 100%;
   padding-horizontal: 16px;
   bottom: 0;
   padding-bottom: 70px;
-  position: absolute;
   background-color: ${theme.background};
 `;
 

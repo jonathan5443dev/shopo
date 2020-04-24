@@ -28,10 +28,6 @@ const Bag = () => {
         <ProductCardBag product={mockedProduct} />
         <ProductCardBag product={mockedProduct} />
         <ProductCardBag product={mockedProduct} />
-        <ProductCardBag product={mockedProduct} />
-        <ProductCardBag product={mockedProduct} />
-        <ProductCardBag product={mockedProduct} />
-        <ProductCardBag product={mockedProduct} />
       </ProductContainer>
       <Footer>
         <Total>

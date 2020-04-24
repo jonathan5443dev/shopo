@@ -40,14 +40,18 @@ export const titleHeader = (navigation, title) => ({
   ),
 });
 
-export const searchHeader = navigation => ({
-  title: '',
+export const searchHeader = (navigation, title = '') => ({
+  title,
   headerStyle: {
     backgroundColor: DefaultTheme.background,
     shadowColor: 'transparent',
     elevation: 0,
     borderBottomWidth: 0,
     height: height(),
+  },
+  headerTitleStyle: {
+    fontWeight: 'bold',
+    fontSize: 16,
   },
   headerLeft: () => (
     <TouchableOpacity onPress={() => navigation.goBack()}>

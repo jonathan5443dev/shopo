@@ -10,16 +10,16 @@ export const SummerSalesContainer = styled.View`
   padding-vertical: 20px;
   justify-content: center;
   align-items: center;
-  margin: 10px;
+  margin-vertical: 10px;
   border-radius: 10px;
 `;
 
 export const CategoryTab = styled.View`
-  background-color: ${theme.white};
+  background-color: #ffffff;
   padding-vertical: 20px;
   justify-content: center;
   align-items: center;
-  margin: 10px;
+  margin-vertical: 10px;
   border-radius: 10px;
 `;
 

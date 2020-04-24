@@ -10,5 +10,5 @@ export default {
   red: '#EB001B',
   fontFamily: 'Metropolis-Regular',
   fontFamilyBold: 'Metropolis-Bold',
-  fontFamilySemiBold: 'Metropolis-SemiBold'
+  fontFamilySemiBold: 'Metropolis-SemiBold',
 };

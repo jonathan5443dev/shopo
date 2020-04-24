@@ -5,14 +5,15 @@ export const ProductsCarouselContainer = styled.View`
 `;
 
 export const ProductsCarouselHeader = styled.View`
-  padding-horizontal: 10px;
+  padding-horizontal: 0px;
+  padding-bottom: 8px;
 `;
 
 export const ViewAllLink = styled.TouchableOpacity`
   position: absolute;
-  right: 10px;
+  right: 0px;
   top: 10px;
-  padding: 20px;
+  padding-vertical: 20px;
 `;
 
 export const ScrollContainer = styled.ScrollView``;

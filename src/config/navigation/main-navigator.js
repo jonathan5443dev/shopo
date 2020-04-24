@@ -17,7 +17,6 @@ import CreateAddress from '../../screens/create-address/create-address';
 import Categories from '../../screens/categories/categories';
 import Profile from '../../screens/profile/profile';
 import CategoryDetail from '../../screens/category-detail/category-detail';
-import ProductDetail from '../../screens/product-detail/product-detail';
 import Checkout from '../../screens/checkout/checkout';
 
 import ProductCarousel from '../../components/products-carousel/products-carousel';
@@ -55,24 +54,26 @@ const AppNavigator = createStackNavigator({
     screen: Checkout,
     navigationOptions: ({navigation}) => titleHeader(navigation, 'Checkout'),
   },
-  Home: createBottomTabNavigator(
+  TabBar: createBottomTabNavigator(
     {
       Home: {
         screen: Home,
-        navigationOptions: () => emptyHeader(),
       },
-      Categories: createStackNavigator({
-        Categories: {screen: Categories},
-        CategoryDetail: {
-          screen: CategoryDetail,
-          navigationOptions: () => emptyHeader(),
+      Categories: createStackNavigator(
+        {
+          Categories: {
+            screen: Categories,
+          },
+          CategoryDetail: {
+            screen: CategoryDetail,
+          },
         },
-      }),
+        {
+          headerMode: 'none',
+        },
+      ),
       Bag: {
         screen: Bag,
-      },
-      Favorites: {
-        screen: ProductDetail,
       },
       Account: {
         screen: Profile,
@@ -87,7 +88,7 @@ const AppNavigator = createStackNavigator({
           );
         },
       }),
-      navigationOptions: ({navigation}) => searchHeader(navigation),
+      navigationOptions: ({navigation}) => searchHeader(navigation, 'shopo'),
       tabBarOptions: {
         inactiveTintColor: DefaultTheme.gray,
         activeTintColor: DefaultTheme.primary,
