@@ -36,7 +36,8 @@ const styleByType = type => {
     case 'description':
       return {
         'font-family': theme.fontFamily,
-        'font-size': '14px',
+        'font-size': '16px',
+        'letter-spacing': '-0.15px',
       };
     case 'crossed':
       return {
