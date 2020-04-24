@@ -39,7 +39,7 @@ FeatureModal.propTypes = {
   title: PropTypes.string.isRequired,
   options: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
       value: PropTypes.string.isRequired,
     }),
   ).isRequired,

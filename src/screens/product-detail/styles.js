@@ -14,6 +14,7 @@ export const FeatureContainer = styled.View`
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
+  margin-vertical: 10px;
 `;
 
 export const BasicInformation = styled.View`
@@ -39,3 +40,5 @@ export const ContainerButton = styled.View`
   padding-horizontal: 20px;
   padding-vertical: 10px;
 `;
+
+export const ContentScrollable = styled.ScrollView``;
