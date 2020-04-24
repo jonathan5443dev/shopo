@@ -35,9 +35,9 @@ export const InputField = styled.TextInput`
   flex: 1;
   width: 100%;
   font-family: ${theme.fontFamily}
-  padding: 10px;
+  padding-horizontal: 10px;
+  padding-vertical: 5px;
   opacity: ${props => (props.editable ? 1 : 0.5)};
-  background-color: white;
 `;
 
 export const ErrorIcon = styled.Image`

@@ -1,5 +1,4 @@
 import styled from 'styled-components/native';
-import theme from '../../config/themes/default';
 
 export const List = styled.FlatList`
   width: 100%;
@@ -9,7 +8,7 @@ export const Option = styled.TouchableOpacity`
   width: 100%;
   border-bottom-width: 1px;
   border-bottom-color: #e6e6e6;
-  padding-vertical: 16;
+  padding-vertical: 16px;
 `;
 
 export const Header = styled.View`

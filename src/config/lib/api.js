@@ -24,7 +24,7 @@ const visitEndpoints = (endpoints, callback) => {
 const createAxios = opts => {
   const axiosInstance = axios.create(opts);
   return {
-    axiosInstance
+    axiosInstance,
   };
 };
 
@@ -38,11 +38,11 @@ export default class API {
       this[name] = (params = {}) => {
         if (['get', 'delete', 'head', 'options'].includes(method)) {
           return axiosInstance[method](getURI(uri, params.url), {
-            headers: params.headers
+            headers: params.headers,
           }).then(r => r.data);
         }
         return axiosInstance[method](getURI(uri, params.url), params.body, {
-          headers: params.headers
+          headers: params.headers,
         }).then(r => r.data);
       };
     });
