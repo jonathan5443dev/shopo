@@ -57,12 +57,32 @@ export default {
   checkout: {
     change: 'Change',
     shippingAddress: 'Shipping Address',
-    payment: 'Payment',
+    paymentMethod: 'Payment',
     deliveryMethod: 'Delivery method',
     submitOrder: 'Submit Order',
     summary: 'Summary',
     order: 'Order',
     delivery: 'Delivery',
+    totalAmount: 'Total Amount',
+    discount: 'Discount'
   },
   addToCart: 'Add to cart',
+  orders: {
+    title: 'My Orders',
+    order: 'Order',
+    trackingNumber: 'Tracking number',
+    quantity: 'Quantity',
+    totalAmount: 'Total Amount',
+    details: 'Details',
+    delivered: 'Delivered',
+    processing: 'Processing',
+    cancelled: 'Cancelled'
+  },
+  orderDetail: {
+    units: 'Units',
+    size: 'Size',
+    color: 'Color',
+    leaveFeedback: 'Leave Feedback',
+    reorder: 'Reorder'
+  }
 };
