@@ -19,6 +19,7 @@ import Profile from '../../screens/profile/profile';
 import CategoryDetail from '../../screens/category-detail/category-detail';
 import ProductDetail from '../../screens/product-detail/product-detail';
 import Checkout from '../../screens/checkout/checkout';
+import ProfileSettings from '../../screens/profile-settings/profile-settings';
 
 import ProductCarousel from '../../components/products-carousel/products-carousel';
 
@@ -74,9 +75,13 @@ const AppNavigator = createStackNavigator({
       Favorites: {
         screen: ProductDetail,
       },
-      Account: {
-        screen: Profile,
-      },
+      Account: createStackNavigator({
+        Account: {screen: Profile},
+        ProfileSettings: {
+          screen: ProfileSettings,
+          navigationOptions: () => emptyHeader(),
+        },
+      }),
     },
     {
       defaultNavigationOptions: ({navigation}) => ({
