@@ -25,8 +25,8 @@ const ProfileSettings = () => {
           fullname: '',
           password: '',
           birthdate: '',
-          oldpassword: '',
-          newpassword: '',
+          oldPassword: '',
+          newPassword: '',
         }}
         onSubmit={values =>
           dispatch(
@@ -49,11 +49,11 @@ const ProfileSettings = () => {
             />
             <Text>Change password</Text>
             <Input
-              onChangeText={handleChange('oldpassword')}
-              value={values.oldpassword}
+              onChangeText={handleChange('oldPassword')}
+              value={values.oldPassword}
               secureTextEntry={true}
-              error={touched.oldpassword && errors.oldpassword}
-              label="oldpassword"
+              error={touched.oldPassword && errors.oldPassword}
+              label="oldPassword"
             />
             <Input
               onChangeText={handleChange('password')}
@@ -63,11 +63,11 @@ const ProfileSettings = () => {
               label="Password"
             />
             <Input
-              onChangeText={handleChange('newpassword')}
-              value={values.newpassword}
+              onChangeText={handleChange('newPassword')}
+              value={values.newPassword}
               secureTextEntry={true}
-              error={touched.newpassword && errors.newpassword}
-              label="newpassword"
+              error={touched.newPassword && errors.newPassword}
+              label="newPassword"
             />
             <Button value={t('login.submit')} onPress={handleSubmit} />
           </>
