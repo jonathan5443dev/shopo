@@ -19,6 +19,9 @@ import Profile from '../../screens/profile/profile';
 import CategoryDetail from '../../screens/category-detail/category-detail';
 import Checkout from '../../screens/checkout/checkout';
 
+import Orders from '../../screens/orders/orders';
+import OrderDetail from '../../screens/order-detail/order-detail';
+
 import ProductCarousel from '../../components/products-carousel/products-carousel';
 
 import TabIcon from '../../components/tab-icon/tab-icon';
@@ -66,6 +69,21 @@ const AppNavigator = createStackNavigator({
           },
           CategoryDetail: {
             screen: CategoryDetail,
+          },
+        },
+        {
+          headerMode: 'none',
+        },
+      ),
+      Orders: createStackNavigator(
+        {
+          Orders: {
+            screen: Orders,
+          },
+          OrderDetail: {
+            screen: OrderDetail,
+            navigationOptions: ({navigation}) =>
+              searchHeader(navigation, 'Order Details'),
           },
         },
         {

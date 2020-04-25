@@ -8,6 +8,7 @@ export default {
   whiteBackground: '#E5E5E5',
   pureWhite: '#FFFFFF',
   red: '#EB001B',
+  green: '#2AA952',
   fontFamily: 'Metropolis-Regular',
   fontFamilyBold: 'Metropolis-Bold',
   fontFamilySemiBold: 'Metropolis-SemiBold',
