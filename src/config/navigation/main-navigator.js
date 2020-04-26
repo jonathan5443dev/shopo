@@ -72,29 +72,37 @@ const AppNavigator = createStackNavigator({
           navigationOptions: () => emptyHeader(),
         },
       }),
-      Orders: createStackNavigator({
-        Orders: {
-          screen: Orders
+      Orders: createStackNavigator(
+        {
+          Orders: {
+            screen: Orders,
+          },
+          OrderDetail: {
+            screen: OrderDetail,
+            navigationOptions: ({navigation}) =>
+              searchHeader(navigation, 'Order Details'),
+          },
         },
-        OrderDetail: {
-          screen: OrderDetail,
-          navigationOptions: ({navigation}) => searchHeader(navigation, 'Order Details')
-        }
-      },
-      { headerMode: 'none'}),
+        {headerMode: 'none'},
+      ),
       Bag: {
         screen: Bag,
       },
       Favorites: {
         screen: ProductDetail,
       },
-      Account: createStackNavigator({
-        Account: {screen: Profile},
-        ProfileSettings: {
-          screen: ProfileSettings,
-          navigationOptions: () => emptyHeader(),
+      Account: createStackNavigator(
+        {
+          Account: {screen: Profile},
+          ProfileSettings: {
+            screen: ProfileSettings,
+            navigationOptions: () => emptyHeader(),
+          },
         },
-      }),
+        {
+          headerMode: 'none',
+        },
+      ),
     },
     {
       defaultNavigationOptions: ({navigation}) => ({
