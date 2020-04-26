@@ -6,6 +6,7 @@ import {useTranslation} from 'react-i18next';
 import AvatarImage from '../../assets/images/product-1.png';
 import {List, Option, Header, Avatar, Information} from './styles';
 import loginActions from '../../redux/reducers/login';
+import pfactions from '../../redux/reducers/profile-settings';
 
 const Profile = () => {
   const {t} = useTranslation();
@@ -28,7 +29,7 @@ const Profile = () => {
       id: '3',
       title: t('profile.settings'),
       subTitle: t('profile.notificationsPassword'),
-      action: () => {},
+      action: () => dispatch(pfactions.startProfileSettingsFlow()),
     },
     {
       id: '4',

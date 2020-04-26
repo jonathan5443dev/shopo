@@ -19,6 +19,7 @@ import Profile from '../../screens/profile/profile';
 import CategoryDetail from '../../screens/category-detail/category-detail';
 import ProductDetail from '../../screens/product-detail/product-detail';
 import Checkout from '../../screens/checkout/checkout';
+import ProfileSettings from '../../screens/profile-settings/profile-settings';
 
 import Orders from "../../screens/orders/orders";
 import OrderDetail from "../../screens/order-detail/order-detail";
@@ -71,25 +72,37 @@ const AppNavigator = createStackNavigator({
           navigationOptions: () => emptyHeader(),
         },
       }),
-      Orders: createStackNavigator({
-        Orders: {
-          screen: Orders
+      Orders: createStackNavigator(
+        {
+          Orders: {
+            screen: Orders,
+          },
+          OrderDetail: {
+            screen: OrderDetail,
+            navigationOptions: ({navigation}) =>
+              searchHeader(navigation, 'Order Details'),
+          },
         },
-        OrderDetail: {
-          screen: OrderDetail,
-          navigationOptions: ({navigation}) => searchHeader(navigation, 'Order Details')
-        }
-      },
-      { headerMode: 'none'}),
+        {headerMode: 'none'},
+      ),
       Bag: {
         screen: Bag,
       },
       Favorites: {
         screen: ProductDetail,
       },
-      Account: {
-        screen: Profile,
-      },
+      Account: createStackNavigator(
+        {
+          Account: {screen: Profile},
+          ProfileSettings: {
+            screen: ProfileSettings,
+            navigationOptions: () => emptyHeader(),
+          },
+        },
+        {
+          headerMode: 'none',
+        },
+      ),
     },
     {
       defaultNavigationOptions: ({navigation}) => ({
