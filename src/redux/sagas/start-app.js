@@ -9,7 +9,7 @@ function* startApplicationFlow() {
   try {
     const authentication = yield select(getAuthentication);
     if (authentication !== '') {
-      App.navigation.navigate('Home');
+      App.navigation.navigate('Orders');
     } else {
       App.navigation.navigate('Login');
     }

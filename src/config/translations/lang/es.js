@@ -58,12 +58,32 @@ export default {
   checkout: {
     change: 'Cambiar',
     shippingAddress: 'Dirección de Envío',
-    payment: 'Método de pago',
+    paymentMethod: 'Método de pago',
     deliveryMethod: 'Método de entrega',
     submitOrder: 'Enviar orden',
     summary: 'Resumen',
     order: 'Orden',
     delivery: 'Envio',
+    totalAmount: 'Monto Total',
+    discount: 'Descuento'
   },
   addToCart: 'Agregar al carrito',
+  orders: {
+    title: 'Mis Órdenes',
+    order: 'Orden',
+    trackingNumber: 'Número de seguimiento',
+    quantity: 'Cantidad',
+    totalAmount: 'Monto Total',
+    details: 'Detalles',
+    delivered: 'Enviado',
+    procesing: 'Procesando',
+    cancelled: 'Cancelado'
+  },
+  orderDetail: {
+    units: 'Unidades',
+    size: 'Tamaño',
+    color: 'Color',
+    leaveFeedback: 'Dejar comentario',
+    reorder: 'Reordenar'
+  }
 };

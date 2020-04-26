@@ -1,11 +1,11 @@
 /* eslint react/prop-types: 0 */
 import React from 'react';
-import {createAppContainer} from 'react-navigation';
-import {createBottomTabNavigator} from 'react-navigation-tabs';
-import {createStackNavigator} from 'react-navigation-stack';
+import { createAppContainer } from 'react-navigation';
+import { createBottomTabNavigator } from 'react-navigation-tabs';
+import { createStackNavigator } from 'react-navigation-stack';
 
 import DefaultTheme from '../themes/default';
-import {emptyHeader, searchHeader, titleHeader} from './styles';
+import { emptyHeader, searchHeader, titleHeader } from './styles';
 import Login from '../../screens/login/login';
 import RecoveryPassword from '../../screens/recovery-password/recovery-password';
 import SingUp from '../../screens/sing-up/sing-up';
@@ -20,6 +20,9 @@ import CategoryDetail from '../../screens/category-detail/category-detail';
 import ProductDetail from '../../screens/product-detail/product-detail';
 import Checkout from '../../screens/checkout/checkout';
 import ProfileSettings from '../../screens/profile-settings/profile-settings';
+
+import Orders from "../../screens/orders/orders";
+import OrderDetail from "../../screens/order-detail/order-detail";
 
 import ProductCarousel from '../../components/products-carousel/products-carousel';
 
@@ -69,6 +72,16 @@ const AppNavigator = createStackNavigator({
           navigationOptions: () => emptyHeader(),
         },
       }),
+      Orders: createStackNavigator({
+        Orders: {
+          screen: Orders
+        },
+        OrderDetail: {
+          screen: OrderDetail,
+          navigationOptions: ({navigation}) => searchHeader(navigation, 'Order Details')
+        }
+      },
+      { headerMode: 'none'}),
       Bag: {
         screen: Bag,
       },
