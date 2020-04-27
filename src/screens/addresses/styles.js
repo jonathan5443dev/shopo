@@ -4,6 +4,7 @@ import theme from '../../config/themes/default';
 export const AddressList = styled.ScrollView`
   margin-vertical: 16px;
   max-height: 100%;
+  padding-bottom: 150px;
 `;
 
 export const AddButton = styled.TouchableOpacity`

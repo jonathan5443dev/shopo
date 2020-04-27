@@ -11,12 +11,12 @@ const TabIcon = ({name, color, focused}) => {
     switch (name) {
       case 'Home':
         return HomeIcon;
+      case 'Categories':
+        return FavoritesIcon;
       case 'Bag':
         return BagIcon;
       case 'Account':
         return AccountIcon;
-      case 'Favorites':
-        return FavoritesIcon;
       default:
         return HomeIcon;
     }

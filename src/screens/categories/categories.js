@@ -5,10 +5,11 @@ import PropTypes from 'prop-types';
 import Category from './category';
 
 import * as Tags from './styles';
+import Container from '../../components/container/container';
 
 const Categories = ({categories}) => {
   return (
-    <>
+    <Container>
       <Tags.Tabs>
         {categories.map((element, index) => {
           return (
@@ -24,7 +25,7 @@ const Categories = ({categories}) => {
           );
         })}
       </Tags.Tabs>
-    </>
+    </Container>
   );
 };
 
