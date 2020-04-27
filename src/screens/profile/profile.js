@@ -6,6 +6,9 @@ import {useTranslation} from 'react-i18next';
 import AvatarImage from '../../assets/images/product-1.png';
 import {List, Option, Header, Avatar, Information} from './styles';
 import loginActions from '../../redux/reducers/login';
+import profileActions from '../../redux/reducers/profile-settings';
+import ordersActions from '../../redux/reducers/orders';
+import addressesActions from '../../redux/reducers/addresses';
 
 const Profile = () => {
   const {t} = useTranslation();
@@ -16,19 +19,19 @@ const Profile = () => {
       id: '1',
       title: t('profile.shippingAddresses'),
       subTitle: `3 ${t('profile.addresses')}`,
-      action: () => {},
+      action: () => dispatch(addressesActions.startAddressesFlow()),
     },
     {
       id: '2',
       title: t('profile.myOrders'),
       subTitle: `3 ${t('profile.orders')}`,
-      action: () => {},
+      action: () => dispatch(ordersActions.startOrdersFlow()),
     },
     {
       id: '3',
       title: t('profile.settings'),
       subTitle: t('profile.notificationsPassword'),
-      action: () => {},
+      action: () => dispatch(profileActions.startProfileSettingsFlow()),
     },
     {
       id: '4',
