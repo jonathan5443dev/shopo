@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 import theme from '../../config/themes/default';
 
-export const Container = styled.View`
+export const Container = styled.TouchableOpacity`
   height: 260px;
   width: 160px;
   border-radius: 15px;
@@ -23,7 +23,7 @@ export const ProductImage = styled.Image`
   position: absolute;
   top: 0px;
   width: 100%;
-  zIndex: -1;
+  z-index: -1;
   border-radius: 15px;
 `;
 

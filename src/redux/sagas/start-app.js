@@ -1,7 +1,7 @@
-import {takeLatest, select, delay} from 'redux-saga/effects';
+import {takeLatest, select, delay, put} from 'redux-saga/effects';
 import App from '../../config/app';
 import SplashScreen from 'react-native-splash-screen';
-
+import HomeActions from '../reducers/home';
 export const getAuthentication = state => state.user.authentication;
 
 function* startApplicationFlow() {
@@ -9,7 +9,7 @@ function* startApplicationFlow() {
   try {
     const authentication = yield select(getAuthentication);
     if (authentication !== '') {
-      App.navigation.reset('TabBar');
+      yield put(HomeActions.startHomeFlow());
     } else {
       App.navigation.navigate('Login');
     }

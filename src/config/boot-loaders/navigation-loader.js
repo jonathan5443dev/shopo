@@ -25,11 +25,16 @@ export default class NavigationLoader {
     }
   }
 
-  static reset(routeName) {
+  static reset(routeName, params) {
     const action = StackActions.reset({
       index: 0,
       key: undefined,
-      actions: [NavigationActions.navigate({routeName})],
+      actions: [
+        NavigationActions.navigate({
+          routeName,
+          params,
+        }),
+      ],
     });
     this.stack.dispatch(action);
   }

@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import {useDispatch} from 'react-redux';
 import Text from '../text/text';
 import * as Tags from './styles';
 
 import productDemo from '../../assets/images/product-1.png';
+import productActions from '../../redux/reducers/product';
 
 const ProductCard = ({product}) => {
+  const dispatch = useDispatch();
   const renderDiscountPercentage = () => {
     if (product.hasDiscount) {
       return (
@@ -26,7 +28,8 @@ const ProductCard = ({product}) => {
   };
 
   return (
-    <Tags.Container>
+    <Tags.Container
+      onPress={() => dispatch(productActions.startProductDetailFlow(product))}>
       <Tags.ProductCardHeader>
         <Tags.ProductImage source={productDemo} resizeMode="cover" />
         {renderDiscountPercentage()}

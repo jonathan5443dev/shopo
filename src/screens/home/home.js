@@ -5,7 +5,9 @@ import Container from '../../components/container/container';
 import Slider from '../../components/slider/slider';
 import {ProductsContainer} from './styles';
 
-const Home = () => {
+const Home = ({navigation}) => {
+  const products = navigation.state.params.products;
+  console.log(products);
   const slides = [
     {
       url: 'https://picsum.photos/600/300',
@@ -20,9 +22,21 @@ const Home = () => {
     <Container>
       <Slider slides={slides} />
       <ProductsContainer>
-        <ProductsCarousel title="Sale" titleDescription="Super summer sale" />
-        <ProductsCarousel title="New" titleDescription="New summer clothes" />
-        <ProductsCarousel title="Pants" titleDescription="New pants" />
+        <ProductsCarousel
+          products={products.sales}
+          title="Sale"
+          titleDescription="Super summer sale"
+        />
+        <ProductsCarousel
+          products={products.news}
+          title="New"
+          titleDescription="New summer clothes"
+        />
+        <ProductsCarousel
+          products={products.pants}
+          title="Pants"
+          titleDescription="New pants"
+        />
       </ProductsContainer>
     </Container>
   );

@@ -7,16 +7,7 @@ import Text from '../text/text';
 
 import * as Tags from './styles';
 
-const mockedProduct = {
-  name: 'Dorothy perkings',
-  discountPercentage: '30',
-  categoryName: 'Evening dress 1',
-  previousPrice: '15',
-  price: '12',
-  hasDiscount: true,
-};
-
-const ProductsCarousel = ({title, titleDescription}) => {
+const ProductsCarousel = ({title, titleDescription, products}) => {
   const {t} = useTranslation();
 
   return (
@@ -32,11 +23,9 @@ const ProductsCarousel = ({title, titleDescription}) => {
       </Tags.ProductsCarouselHeader>
       <Tags.ScrollContainer horizontal={true}>
         <Tags.ProductsCarouselContainer>
-          <ProductCard product={mockedProduct} />
-          <ProductCard product={mockedProduct} />
-          <ProductCard product={mockedProduct} />
-          <ProductCard product={mockedProduct} />
-          <ProductCard product={mockedProduct} />
+          {products.map(product => (
+            <ProductCard key={product.id} product={product} />
+          ))}
         </Tags.ProductsCarouselContainer>
       </Tags.ScrollContainer>
     </>

@@ -22,14 +22,13 @@ import ProfileSettings from '../../screens/profile-settings/profile-settings';
 
 import Orders from '../../screens/orders/orders';
 import OrderDetail from '../../screens/order-detail/order-detail';
-
-import ProductCarousel from '../../components/products-carousel/products-carousel';
+import ProductDetail from '../../screens/product-detail/product-detail';
 
 import TabIcon from '../../components/tab-icon/tab-icon';
 
 const AppNavigator = createStackNavigator({
-  Product: {
-    screen: ProductCarousel,
+  Login: {
+    screen: Login,
     navigationOptions: () => emptyHeader(),
   },
   RecoveryPassword: {
@@ -38,10 +37,6 @@ const AppNavigator = createStackNavigator({
   },
   SingUp: {
     screen: SingUp,
-    navigationOptions: () => emptyHeader(),
-  },
-  Login: {
-    screen: Login,
     navigationOptions: () => emptyHeader(),
   },
   Addresses: {
@@ -61,6 +56,11 @@ const AppNavigator = createStackNavigator({
   ProfileSettings: {
     screen: ProfileSettings,
     navigationOptions: ({navigation}) => searchHeader(navigation, 'Settings'),
+  },
+  ProductDetail: {
+    screen: ProductDetail,
+    navigationOptions: ({navigation}) =>
+      searchHeader(navigation, 'Product Detail'),
   },
   Orders: {
     screen: Orders,
