@@ -9,8 +9,8 @@ const {Types, Creators} = createActions({
 export default Creators;
 
 export const INITIAL_STATE = {
-  products: false,
-  total: '',
+  products: {},
+  total: 0,
 };
 
 export const set = (state = INITIAL_STATE, action) => {

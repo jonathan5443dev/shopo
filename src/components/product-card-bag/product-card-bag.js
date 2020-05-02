@@ -23,11 +23,11 @@ const ProductCardBag = ({product}) => {
           <Text type="small" color="gray">
             {t('bag.detail')}
           </Text>
-          <Text type="small">{product.detail}</Text>
+          <Text type="small">{product.brand}</Text>
         </Tags.DetailContainer>
-        <Counter quantity={product.quantity} />
+        <Counter product={product} />
         <Tags.Price>
-          <Text type="highlight">{`${product.price}$`}</Text>
+          <Text type="highlight">{`${product.price * product.quantity}$`}</Text>
         </Tags.Price>
       </Tags.Detail>
       <Tags.Options onPress={() => {}}>

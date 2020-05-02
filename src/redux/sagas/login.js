@@ -2,6 +2,7 @@ import {takeLatest, call, put} from 'redux-saga/effects';
 import LoginActions from '../reducers/login';
 import App from '../../config/app';
 import UserActions from '../reducers/user';
+import HomeActions from '../reducers/home';
 
 function* Login(action) {
   try {
@@ -28,7 +29,7 @@ function* Login(action) {
       yield put(UserActions.setUserData(...Object.values(userProfile)));
       yield put(UserActions.setUserAuthentication(authentication.auth_token));
       yield put(LoginActions.loginSuccess());
-      App.navigation.navigate('Home');
+      yield put(HomeActions.startHomeFlow());
     } else {
       LoginActions.loginFailed(authentication.error);
     }

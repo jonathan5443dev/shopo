@@ -3,9 +3,10 @@ import React, {useState} from 'react';
 import FeatureModal from '../../components/feature-modal/feature-modal';
 import Text from '../../components/text/text';
 import Button from '../../components/button/button';
+import {useDispatch} from 'react-redux';
 import Container from '../../components/container/container';
 import ProductImageCarousel from '../../components/product-image-carousel/product-image-carousel';
-
+import shoppingCartActions from '../../redux/reducers/shopping-cart';
 import * as Tags from './styles';
 
 import product1 from '../../assets/images/product1.png';
@@ -61,6 +62,7 @@ const ProductDetail = ({navigation}) => {
   const [modalSize, setModalSize] = useState(false);
   const [modalColor, setModalColor] = useState(false);
   const {t} = useTranslation();
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -102,7 +104,10 @@ const ProductDetail = ({navigation}) => {
         />
       </Container>
       <Tags.ContainerButton>
-        <Button value={t('addToCart')} />
+        <Button
+          onPress={() => dispatch(shoppingCartActions.AddProductFlow(product))}
+          value={t('addToCart')}
+        />
       </Tags.ContainerButton>
     </>
   );

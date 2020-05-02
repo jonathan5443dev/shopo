@@ -5,6 +5,11 @@ export const ProductContainer = styled.View`
   max-height: 100%;
 `;
 
+export const Empty = styled.View`
+  align-items: center;
+  padding: 30px;
+`;
+
 export const Footer = styled.View`
   width: 100%;
   padding-horizontal: 16px;
