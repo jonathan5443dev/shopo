@@ -4,6 +4,9 @@ import loginFlows from './login';
 import profileSettingsFlows from './profile-settings';
 import ordersFlows from './orders';
 import addressesFlows from './addresses';
+import shoppingCartFlows from './shopping-cart';
+import homeFlows from './home';
+import productFlows from './product';
 
 export default function* rootSaga() {
   yield all([
@@ -12,5 +15,8 @@ export default function* rootSaga() {
     profileSettingsFlows(),
     ordersFlows(),
     addressesFlows(),
+    shoppingCartFlows(),
+    homeFlows(),
+    productFlows(),
   ]);
 }

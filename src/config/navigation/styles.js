@@ -52,6 +52,8 @@ export const searchHeader = (navigation, title = '') => ({
   headerTitleStyle: {
     fontWeight: 'bold',
     fontSize: 16,
+    textAlign: 'center',
+    alignSelf: 'center',
   },
   headerLeft: () => (
     <TouchableOpacity onPress={() => navigation.goBack()}>

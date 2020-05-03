@@ -16,6 +16,7 @@ export default {
     detail: 'Detalle: ',
     checkout: 'Continuar',
     total: 'Total ',
+    empty: 'Nada por aqui',
   },
   profile: {
     title: 'Mi perfil',
@@ -65,7 +66,7 @@ export default {
     order: 'Orden',
     delivery: 'Envio',
     totalAmount: 'Monto Total',
-    discount: 'Descuento'
+    discount: 'Descuento',
   },
   addToCart: 'Agregar al carrito',
   orders: {
@@ -77,13 +78,13 @@ export default {
     details: 'Detalles',
     delivered: 'Enviado',
     procesing: 'Procesando',
-    cancelled: 'Cancelado'
+    cancelled: 'Cancelado',
   },
   orderDetail: {
     units: 'Unidades',
     size: 'Tamaño',
     color: 'Color',
     leaveFeedback: 'Dejar comentario',
-    reorder: 'Reordenar'
-  }
+    reorder: 'Reordenar',
+  },
 };

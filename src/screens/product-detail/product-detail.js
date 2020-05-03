@@ -3,9 +3,10 @@ import React, {useState} from 'react';
 import FeatureModal from '../../components/feature-modal/feature-modal';
 import Text from '../../components/text/text';
 import Button from '../../components/button/button';
+import {useDispatch} from 'react-redux';
 import Container from '../../components/container/container';
 import ProductImageCarousel from '../../components/product-image-carousel/product-image-carousel';
-
+import shoppingCartActions from '../../redux/reducers/shopping-cart';
 import * as Tags from './styles';
 
 import product1 from '../../assets/images/product1.png';
@@ -56,10 +57,12 @@ const images = [
   {id: 1, resource: product4},
 ];
 
-const ProductDetail = () => {
+const ProductDetail = ({navigation}) => {
+  const product = navigation.state.params.product;
   const [modalSize, setModalSize] = useState(false);
   const [modalColor, setModalColor] = useState(false);
   const {t} = useTranslation();
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -68,35 +71,22 @@ const ProductDetail = () => {
         <Tags.ContentScrollable>
           <Tags.FeatureContainer>
             <Tags.OpenModal onPress={() => setModalSize(true)}>
-              <Text type="headline 3">Size</Text>
+              <Text type="headline 3">{product.size}</Text>
             </Tags.OpenModal>
             <Tags.OpenModal onPress={() => setModalColor(true)}>
-              <Text type="headline 3">Color</Text>
+              <Text type="headline 3">{product.color}</Text>
             </Tags.OpenModal>
           </Tags.FeatureContainer>
           <Tags.BasicInformation>
             <Tags.NameAndBrand>
-              <Text type="headline 2">Name</Text>
-              <Text type="headline 3">Brand Name</Text>
+              <Text type="headline 2">{product.name}</Text>
+              <Text type="headline 3">{product.brand}</Text>
             </Tags.NameAndBrand>
             <Tags.Price>
-              <Text type="headline 3">$ 19.00</Text>
+              <Text type="headline 3">$ {product.price}</Text>
             </Tags.Price>
           </Tags.BasicInformation>
-          <Text type="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-            vitae mi nunc. Donec pretium mauris non sapien pretium, sit amet
-            faucibus elit elit imperdiet. Quisque porta neque eget mauris
-            placerat, placerat, vestibulum. Aenean auctor lorem in tellus
-            tincidunt, sed luctus nisi nisi pharetra. Vivamus neque justo,
-            dignissim ut mi id, laoreet mollis mollis tortor. Integer ut
-            fermentum turpis, ac sagittis justo. Praesent lacinia nisl sed ex
-            sagittis, sed tincidunt justo tincidunt. Ut sollicitudin interdum
-            mi, at fermentum augue finibus vitae. Integer in dignissim sapien,
-            eget rutrum mi. Morbi congue, tortor nec aliquet ultricies, leo ex
-            porta sapien, et porta justo enim at augue. Etiam at lacus urna.
-            Donec a ligula ac augue convallis molestie a sit amet mi.
-          </Text>
+          <Text type="description">{product.description}</Text>
         </Tags.ContentScrollable>
         <FeatureModal
           title="Select size"
@@ -114,7 +104,10 @@ const ProductDetail = () => {
         />
       </Container>
       <Tags.ContainerButton>
-        <Button value={t('addToCart')} />
+        <Button
+          onPress={() => dispatch(shoppingCartActions.AddProductFlow(product))}
+          value={t('addToCart')}
+        />
       </Tags.ContainerButton>
     </>
   );

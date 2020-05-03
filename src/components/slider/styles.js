@@ -17,6 +17,6 @@ export const SlideImage = styled.Image`
 
 export const SlideText = styled.View`
   position: absolute;
-  bottom: 20;
+  bottom: 20px;
   left: 10px;
 `;
