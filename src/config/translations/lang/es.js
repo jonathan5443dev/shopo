@@ -79,6 +79,10 @@ export default {
     delivered: 'Enviado',
     procesing: 'Procesando',
     cancelled: 'Cancelado',
+    success: 'Listo!',
+    deliverSoon: 'Tu orden se enviara pronto!',
+    thanks: 'Gracias por usar nuestra app!',
+    continueShopping: "Continuar comprando"
   },
   orderDetail: {
     units: 'Unidades',

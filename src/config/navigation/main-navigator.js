@@ -22,6 +22,7 @@ import ProfileSettings from '../../screens/profile-settings/profile-settings';
 
 import Orders from '../../screens/orders/orders';
 import OrderDetail from '../../screens/order-detail/order-detail';
+import OrderSuccess from '../../screens/order-success/order-success';
 import ProductDetail from '../../screens/product-detail/product-detail';
 
 import TabIcon from '../../components/tab-icon/tab-icon';
@@ -68,8 +69,12 @@ const AppNavigator = createStackNavigator({
   },
   OrderDetail: {
     screen: OrderDetail,
-    navigationOptions: ({navigation}) =>
+    navigationOptions: ({ navigation }) =>
       searchHeader(navigation, 'Order Details'),
+  },
+  OrderSuccess: {
+    screen: OrderSuccess,
+    navigationOptions: () => emptyHeader()
   },
   TabBar: createBottomTabNavigator(
     {
@@ -97,15 +102,15 @@ const AppNavigator = createStackNavigator({
       },
     },
     {
-      defaultNavigationOptions: ({navigation}) => ({
-        tabBarIcon: ({tintColor, focused}) => {
-          const {routeName} = navigation.state;
+      defaultNavigationOptions: ({ navigation }) => ({
+        tabBarIcon: ({ tintColor, focused }) => {
+          const { routeName } = navigation.state;
           return (
             <TabIcon name={routeName} color={tintColor} focused={focused} />
           );
         },
       }),
-      navigationOptions: ({navigation}) => searchHeader(navigation, 'shopo'),
+      navigationOptions: ({ navigation }) => searchHeader(navigation, 'shopo'),
       tabBarOptions: {
         inactiveTintColor: DefaultTheme.gray,
         activeTintColor: DefaultTheme.primary,
