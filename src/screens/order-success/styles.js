@@ -5,7 +5,7 @@ export const Content = styled.View`
   height: 100%;
   justifyContent: space-between;
   alignItems: center;
-  paddingVertical: 20px;
+  paddingVertical: 50px;
   paddingHorizontal: 5px;
   background-color: ${theme.pureWhite}
 `;
