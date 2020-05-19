@@ -78,6 +78,10 @@ export default {
     delivered: 'Delivered',
     processing: 'Processing',
     cancelled: 'Cancelled',
+    success: 'Success!',
+    deliverSoon: 'Your order will be delivered soon!',
+    thanks: 'Thank you for choosing our app!',
+    continueShopping: "Continue shopping"
   },
   orderDetail: {
     units: 'Units',
